@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  background: #D9D7CE;
+  color: #191919;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+@layer components {
+  .label { @apply font-sans text-[11px] uppercase tracking-widest font-medium; }
+  .field {
+    @apply w-full bg-transparent border border-ink/20 rounded-md px-3 py-3 font-sans text-[12px] text-ink
+           placeholder:text-stone outline-none transition focus:border-ink focus:ring-1 focus:ring-ink;
+  }
+}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.fade-up { animation: fadeUp .8s ease both; }
